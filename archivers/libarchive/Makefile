@@ -25,7 +25,7 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 
-CONFIGURE_ARGS=	--without-xml2
+CONFIGURE_ARGS=	--without-xml2 --disable-acl
 
 PLIST_FILES=	bin/bsdcat \
 		bin/bsdcpio \
