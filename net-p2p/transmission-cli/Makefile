@@ -37,7 +37,7 @@ GEN_LIB_DEPENDS=libb64.so:converters/libb64 \
 		libminiupnpc.so:net/miniupnpc \
 		libnatpmp.so:net/libnatpmp \
 		libutp.so:net/libutp \
-		libevent.so:devel/libevent
+		libevent-2.0.so:devel/libevent2
 GEN_RUN_DEPENDS=${LOCALBASE}/share/transmission/web/index.html:www/transmission-web
 
 # This is master port of transmission-*, so don't override USES definition
