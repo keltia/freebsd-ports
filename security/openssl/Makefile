@@ -100,7 +100,7 @@ THREADS_CONFIGURE_OFF=	no-threads
 ZLIB_CONFIGURE_ON=	zlib zlib-dynamic
 ZLIB_CONFIGURE_OFF=	no-zlib no-zlib-dynamic
 
-CFLAGS+= -Werror -Qunused-arguments
+#CFLAGS+= -Werror -Qunused-arguments
 
 .include <bsd.port.pre.mk>
 
