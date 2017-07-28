@@ -95,6 +95,7 @@
     SUBDIR += courieruserinfo
     SUBDIR += cp2fwb
     SUBDIR += cracklib
+    SUBDIR += crackpkcs12
     SUBDIR += crank
     SUBDIR += create-cert
     SUBDIR += cryptlib
@@ -867,6 +868,7 @@
     SUBDIR += py-ed25519ll
     SUBDIR += py-fail2ban
     SUBDIR += py-fchksum
+    SUBDIR += py-first-server
     SUBDIR += py-flask-httpauth
     SUBDIR += py-gixy
     SUBDIR += py-gnupg
@@ -1026,6 +1028,7 @@
     SUBDIR += rubygem-googleauth
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
+    SUBDIR += rubygem-hkdf
     SUBDIR += rubygem-jugyo-twitter_oauth
     SUBDIR += rubygem-metasploit-aggregator
     SUBDIR += rubygem-metasploit-concern
@@ -1092,6 +1095,7 @@
     SUBDIR += rubygem-sshkit
     SUBDIR += rubygem-timfel-krb5
     SUBDIR += rubygem-twitter_oauth
+    SUBDIR += rubygem-webpush
     SUBDIR += s2n
     SUBDIR += safesh
     SUBDIR += samba-virusfilter
@@ -1113,6 +1117,7 @@
     SUBDIR += sguil
     SUBDIR += sha
     SUBDIR += sha1collisiondetection
+    SUBDIR += sha2wordlist
     SUBDIR += shibboleth2-sp
     SUBDIR += shimmer
     SUBDIR += shishi
