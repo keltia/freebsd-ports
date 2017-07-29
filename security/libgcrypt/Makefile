@@ -20,7 +20,7 @@ USE_GCC=	4.9
 USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-drng-support --enable-static=yes
-CONFIGURE_ENV=	MAKEINFO="makeinfo --no-split"
+CONFIGURE_ENV=	MAKEINFO="${MAKEINFO} --no-split"
 CONFIGURE_TARGET=${ARCH:S/amd64/x86_64/}-portbld-${OPSYS:tl}${OSREL}
 USE_LDCONFIG=	yes
 TEST_TARGET=	check
