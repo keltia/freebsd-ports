@@ -16,6 +16,7 @@ RUN_DEPENDS=	libgpg-error>=1.25:security/libgpg-error
 
 USES=		cpe libtool makeinfo tar:bzip2
 CPE_VENDOR=	gnupg
+USE_GCC=	4.9
 USE_CSTD=	gnu89
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-drng-support --enable-static=yes
