@@ -67,6 +67,7 @@
     SUBDIR += c3270
     SUBDIR += cagibi
     SUBDIR += ccxstream
+    SUBDIR += ceph
     SUBDIR += ceph-devel
     SUBDIR += cf
     SUBDIR += chrony
@@ -946,6 +947,7 @@
     SUBDIR += pipsecd
     SUBDIR += pjsip
     SUBDIR += pjsip-extsrtp
+    SUBDIR += pkt-gen
     SUBDIR += pktanon
     SUBDIR += pload
     SUBDIR += plugdaemon

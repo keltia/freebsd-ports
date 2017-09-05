@@ -377,6 +377,7 @@
     SUBDIR += kibana43
     SUBDIR += kibana44
     SUBDIR += kibana45
+    SUBDIR += kibana46
     SUBDIR += kibana5
     SUBDIR += kibana5-search-guard
     SUBDIR += kibana5-x-pack
@@ -1351,6 +1352,7 @@
     SUBDIR += py-sphinxcontrib-fulltoc
     SUBDIR += py-sphinxcontrib-httpdomain
     SUBDIR += py-sphinxcontrib-programoutput
+    SUBDIR += py-sphinxcontrib-websupport
     SUBDIR += py-stemming
     SUBDIR += py-syck
     SUBDIR += py-tabletext
