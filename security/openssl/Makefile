@@ -100,11 +100,8 @@ THREADS_CONFIGURE_OFF=	no-threads
 ZLIB_CONFIGURE_ON=	zlib zlib-dynamic
 ZLIB_CONFIGURE_OFF=	no-zlib no-zlib-dynamic
 
-<<<<<<< HEAD
-#CFLAGS+= -Werror -Qunused-arguments
+CFLAGS+= -Werror -Qunused-arguments
 
-=======
->>>>>>> upstream/master
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} != gcc && ${COMPILER_VERSION} != 42
