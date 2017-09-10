@@ -7,7 +7,9 @@
     SUBDIR += PDL
     SUBDIR += R
     SUBDIR += R-cran-Amelia
+    SUBDIR += R-cran-CVST
     SUBDIR += R-cran-ChangeAnomalyDetection
+    SUBDIR += R-cran-DEoptimR
     SUBDIR += R-cran-DRR
     SUBDIR += R-cran-Formula
     SUBDIR += R-cran-KFAS
@@ -23,6 +25,7 @@
     SUBDIR += R-cran-RcppArmadillo
     SUBDIR += R-cran-RcppEigen
     SUBDIR += R-cran-Rmpfr
+    SUBDIR += R-cran-robustbase
     SUBDIR += R-cran-Rsolnp
     SUBDIR += R-cran-SparseM
     SUBDIR += R-cran-VGAM
@@ -33,8 +36,9 @@
     SUBDIR += R-cran-car
     SUBDIR += R-cran-coda
     SUBDIR += R-cran-combinat
-    SUBDIR += R-cran-CVST
+    SUBDIR += R-cran-ddalpha
     SUBDIR += R-cran-deldir
+    SUBDIR += R-cran-dimRed
     SUBDIR += R-cran-dlmodeler
     SUBDIR += R-cran-dplyr
     SUBDIR += R-cran-expm
