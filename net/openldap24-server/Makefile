@@ -8,7 +8,6 @@ CATEGORIES=		net databases
 MASTER_SITES=		ftp://ftp.OpenLDAP.org/pub/OpenLDAP/%SUBDIR%/ \
 			ftp://gd.tuwien.ac.at/infosys/network/OpenLDAP/%SUBDIR%/ \
 			ftp://ftp.ntua.gr/mirror/OpenLDAP/%SUBDIR%/ \
-			ftp://ftp.dti.ad.jp/pub/net/OpenLDAP/%SUBDIR%/ \
 			ftp://ftp.u-aizu.ac.jp/pub/net/openldap/%SUBDIR%/ \
 			ftp://ftp.nl.uu.net/pub/unix/db/openldap/%SUBDIR%/ \
 			ftp://sunsite.cnlab-switch.ch/mirror/OpenLDAP/%SUBDIR%/ \
@@ -30,7 +29,6 @@ CONFLICTS=		${PKGNAMEPREFIX}${PORTNAME}-client-2.[0-3].* \
 .else
 PKGNAMESUFFIX?=		-server
 .endif
-EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		delphij@FreeBSD.org
 COMMENT?=		Open source LDAP server implementation
@@ -42,7 +40,7 @@ LICENSE_PERMS=		dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 GNU_CONFIGURE=		yes
 # :keepla because port uses lt_dlopen
-USES=			cpe libtool:keepla ssl
+USES=			cpe libtool:keepla ssl tar:tgz
 .if !defined(CLIENT_ONLY)
 USERS=			ldap
 GROUPS=			ldap
@@ -56,7 +54,7 @@ BROKEN=			incompatible OpenLDAP version: ${WANT_OPENLDAP_VER}
 .endif
 
 PORTREVISION_CLIENT=	0
-PORTREVISION_SERVER=	0
+PORTREVISION_SERVER=	1
 OPENLDAP_SHLIB_MAJOR=	2
 OPENLDAP_SHLIB_MINOR=	10.8
 OPENLDAP_MAJOR=		${DISTVERSION:R}
@@ -75,6 +73,7 @@ OPTIONS_DEFINE+=	REFINT RETCODE RWM SEQMOD SSSVLV SYNCPROV TRANSLUCENT
 OPTIONS_DEFINE+=	UNIQUE VALSORT SMBPWD SHA2 DYNAMIC_BACKENDS SASL
 OPTIONS_DEFINE+=	LMPASSWD
 OPTIONS_DEFINE+=	OUTLOOK
+OPTIONS_DEFINE+=	LASTBIND
 
 OPTIONS_DEFAULT=	MDB SYNCPROV DYNAMIC_BACKENDS
 
@@ -119,6 +118,7 @@ SHA2_DESC=		With SHA2 Password hashes overlay
 LMPASSWD_DESC=		With LM hash password support (DEPRECATED)
 DYNAMIC_BACKENDS_DESC=	Build dynamic backends
 OUTLOOK_DESC=		Force caseIgnoreOrderingMatch on name attribute (experimental)
+LASTBIND_DESC=		With lastbind overlay
 .endif
 
 .if defined(CLIENT_ONLY)
@@ -217,7 +217,7 @@ USE_RC_SUBR=		slapd
 
 EXTRA_PATCHES+=		${FILESDIR}/extrapatch-Makefile.in
 
-.if ${PORT_OPTIONS:MMODULES} || ${PORT_OPTIONS:MDYNAMIC_BACKENDS} || ${PORT_OPTIONS:MSLAPI}
+.if ${PORT_OPTIONS:MDYNAMIC_BACKENDS} || ${PORT_OPTIONS:MSLAPI}
 LIB_DEPENDS+=		libltdl.so:devel/libltdl
 CONFIGURE_ARGS+=	--enable-modules
 PLIST_SUB+=		MODULES=""
@@ -351,6 +351,10 @@ CONFIGURE_ARGS+=	--enable-aci
 CONFIGURE_ARGS+=	--enable-dynacl
 .endif
 
+.if ${PORT_OPTIONS:MLASTBIND}
+CONFIGURE_ARGS+=	--enable-lastbind
+.endif
+
 .if !${PORT_OPTIONS:MBDB}
 CONFIGURE_ARGS+=	--disable-bdb \
 			--disable-hdb
@@ -447,6 +451,12 @@ PLIST_SUB+=		SMBPWD="@comment "
 PLIST_SUB+=		SHA2=""
 .else
 PLIST_SUB+=		SHA2="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MLASTBIND}
+PLIST_SUB+=		LASTBIND=""
+.else
+PLIST_SUB+=		LASTBIND="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MRLOOKUPS}
@@ -552,6 +562,11 @@ post-build:
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} \
 		${MAKE_ARGS} prefix="${PREFIX}" all)
 .endif
+.if ${PORT_OPTIONS:MLASTBIND}
+	@(cd ${BUILD_WRKSRC}/contrib/slapd-modules/lastbind && \
+		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} \
+		${MAKE_ARGS} prefix="${PREFIX}" all)
+.endif
 .endif
 
 pre-install:
@@ -587,6 +602,12 @@ post-install:
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} \
 		${MAKE_ARGS} prefix="${PREFIX}" install)
 	${RM} ${STAGEDIR}${PREFIX}/libexec/openldap/pw-sha2.a
+.endif
+.if ${PORT_OPTIONS:MLASTBIND}
+	@(cd ${WRKSRC}/contrib/slapd-modules/lastbind && \
+		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} \
+		${MAKE_ARGS} prefix="${PREFIX}" install)
+	${RM} ${STAGEDIR}${PREFIX}/libexec/openldap/lastbind.a
 .endif
 .if ${PORT_OPTIONS:MDYNAMIC_BACKENDS} || ${PORT_OPTIONS:MSMBPWD} || ${PORT_OPTIONS:MSHA2}
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/openldap/*.so
