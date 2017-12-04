@@ -302,6 +302,10 @@ WARNING+=	"PYTHON2_DEFAULT_VERSION is defined, consider using DEFAULT_VERSIONS=p
 WARNING+=	"PYTHON3_DEFAULT_VERSION is defined, consider using DEFAULT_VERSIONS=python3=${PYTHON3_DEFAULT_VERSION:S/^python//} instead"
 .endif
 
+.if ${PYTHON2_DEFAULT} != ${PYTHON_DEFAULT} && ${PYTHON3_DEFAULT} != ${PYTHON_DEFAULT}
+WARNING+=	"PYTHON_DEFAULT must be a version present in PYTHON2_DEFAULT or PYTHON3_DEFAULT, if you want more Python flavors, set BUILD_ALL_PYTHON_FLAVORS in your make.conf"
+.endif
+
 .if exists(${LOCALBASE}/bin/python)
 .if !defined(_PYTHON_DEFAULT_VERSION)
 _PYTHON_DEFAULT_VERSION!=	(${LOCALBASE}/bin/python -c \
@@ -337,9 +341,11 @@ PYTHON3_DEFAULT_VERSION?=	python${PYTHON3_DEFAULT}
 .if ${_PYTHON_ARGS} == "2"
 _PYTHON_ARGS=		${PYTHON2_DEFAULT_VERSION:S/^python//}
 _WANTS_META_PORT=	2
+DEV_WARNING+=		"USES=python:2 is deprecated, use USES=python:2.7"
 .elif ${_PYTHON_ARGS} == "3"
 _PYTHON_ARGS=		${PYTHON3_DEFAULT_VERSION:S/^python//}
 _WANTS_META_PORT=	3
+DEV_WARNING+=		"USES=python:3 is deprecated, use USES=python:3.4+ or an appropriate version range"
 .endif  # ${_PYTHON_ARGS} == "2"
 
 .if defined(PYTHON_VERSION)
@@ -424,10 +430,10 @@ _ALL_PYTHON_FLAVORS=	${_PYTHON_VERSIONS:S/.//:S/^/py/}
 .  if defined(BUILD_ALL_PYTHON_FLAVORS) || defined(_PYTHON_FEATURE_ALLFLAVORS)
 FLAVORS=	${_ALL_PYTHON_FLAVORS}
 .  else
-.    for _v in ${PYTHON3_DEFAULT} ${PYTHON2_DEFAULT} ${PYTHON_DEFAULT}
+.    for _v in ${PYTHON_DEFAULT} ${PYTHON2_DEFAULT} ${PYTHON3_DEFAULT}
 _f=	py${_v:S/.//}
-.      if ${_ALL_PYTHON_FLAVORS:M${_f}}
-FLAVORS:=	${_f} ${FLAVORS:N${_f}}
+.      if ${_ALL_PYTHON_FLAVORS:M${_f}} && !${FLAVORS:M${_f}}
+FLAVORS:=	${FLAVORS} ${_f}
 .      endif
 .    endfor
 .  endif
@@ -442,6 +448,7 @@ _PYTHON_VERSION=	${FLAVOR:S/py//:C/(.)/\1./}
 
 .if !empty(FLAVOR) && ${_PYTHON_VERSION} != ${PYTHON_DEFAULT}
 .if defined(_PYTHON_FEATURE_OPTSUFFIX)
+DEV_WARNING+=	"USE_PYTHON=optsuffix is deprecated, consider migrating to using unconditional PKGNAMESUFFIX or PKGNAMEPREFIX"
 PKGNAMESUFFIX=	${PYTHON_PKGNAMESUFFIX}
 .endif
 .endif
@@ -655,8 +662,8 @@ CMAKE_ARGS+=	-DPython_ADDITIONAL_VERSIONS=${PYTHON_VER}
 
 # Python 3rd-party modules
 PYGAME=		${PYTHON_PKGNAMEPREFIX}game>0:devel/py-game@${PY_FLAVOR}
-PYNUMERIC=	${PYTHON_SITELIBDIR}/Numeric/Numeric.py:math/py-numeric@${PY_FLAVOR}
-PYNUMPY=	${PYTHON_SITELIBDIR}/numpy/core/numeric.py:math/py-numpy@${PY_FLAVOR}
+PYNUMERIC=	${PYTHON_PKGNAMEPREFIX}numeric>0:math/py-numeric@${PY_FLAVOR}
+PYNUMPY=	${PYTHON_PKGNAMEPREFIX}numpy>0:math/py-numpy@${PY_FLAVOR}
 
 # Common Python modules that can be needed but only for some versions of Python.
 .if ${PYTHON_REL} < 3400
