@@ -1337,6 +1337,7 @@
     SUBDIR += libchipcard
     SUBDIR += libcidr
     SUBDIR += libcii
+    SUBDIR += libcjson
     SUBDIR += libclc
     SUBDIR += libcli
     SUBDIR += libconcurrent
@@ -5996,6 +5997,7 @@
     SUBDIR += tig
     SUBDIR += tigcc
     SUBDIR += tijmp
+    SUBDIR += tinycbor
     SUBDIR += tinylaf
     SUBDIR += tinyq
     SUBDIR += tkcon
