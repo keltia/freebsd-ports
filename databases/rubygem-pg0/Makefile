@@ -2,17 +2,20 @@
 # $FreeBSD$
 
 PORTNAME=	pg
-PORTVERSION=	1.0.0
+PORTVERSION=	0.21.0
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	0
 
-MAINTAINER=	ruby@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby interface to PostgreSQL library
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
 LICENSE_FILE_BSD2CLAUSE	=${WRKSRC}/BSDL
 LICENSE_FILE_RUBY	=${WRKSRC}/LICENSE
+
+PORTSCOUT=	limit:^0\.
 
 CONFIGURE_ARGS=	--with-pgsql-include-dir=`${PG_CONFIG} --includedir` \
 		--with-pgsql-lib-dir=`${PG_CONFIG} --libdir`
