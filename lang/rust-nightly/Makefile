@@ -6,6 +6,7 @@ PKGNAMESUFFIX=	-nightly
 DISTNAME=	rustc-nightly-src
 
 MASTERDIR=	${.CURDIR}/../rust
+PATCHDIR=	${.CURDIR}/files
 DISTINFO_FILE=	${.CURDIR}/distinfo
 
 CONFLICTS_BUILD=	rust # see FIXME in `pre-fetch` in lang/rust/Makefile
