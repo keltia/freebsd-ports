@@ -2021,7 +2021,6 @@
     SUBDIR += rubygem-gollum-rugged_adapter
     SUBDIR += rubygem-gon
     SUBDIR += rubygem-gon61
-    SUBDIR += rubygem-gon-rails4
     SUBDIR += rubygem-hackpad-cli
     SUBDIR += rubygem-haml
     SUBDIR += rubygem-haml-coderay
@@ -2119,7 +2118,6 @@
     SUBDIR += rubygem-rack-cache
     SUBDIR += rubygem-rack-contrib
     SUBDIR += rubygem-rack-cors
-    SUBDIR += rubygem-rack-cors0
     SUBDIR += rubygem-rack-mount
     SUBDIR += rubygem-rack-openid
     SUBDIR += rubygem-rack-protection
