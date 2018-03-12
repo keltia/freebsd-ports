@@ -1,15 +1,16 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	rlang
-PORTVERSION=	0.2.0
-CATEGORIES=	devel
+PORTNAME=	utf8
+PORTVERSION=	1.1.3
+CATEGORIES=	textproc
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
-COMMENT=	Functions for Base Types and Core R and 'Tidyverse' Features
+COMMENT=	Unicode Text Processing
 
-LICENSE=	GPLv3
+LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cran:auto-plist,compiles
 
