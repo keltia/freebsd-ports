@@ -621,6 +621,7 @@
     SUBDIR += pspp
     SUBDIR += pure-mpfr
     SUBDIR += pure-rational
+    SUBDIR += py-Diofant
     SUBDIR += py-PyWavelets
     SUBDIR += py-altgraph
     SUBDIR += py-apgl
@@ -675,6 +676,7 @@
     SUBDIR += py-seaborn
     SUBDIR += py-statsmodels
     SUBDIR += py-svgmath
+    SUBDIR += py-symcxx
     SUBDIR += py-symeig
     SUBDIR += py-sympy
     SUBDIR += py-theano
