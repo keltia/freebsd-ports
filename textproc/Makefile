@@ -151,13 +151,7 @@
     SUBDIR += ekhtml
     SUBDIR += el-aspell
     SUBDIR += el-hyphen
-    SUBDIR += elasticsearch
     SUBDIR += elasticsearch-plugin-head
-    SUBDIR += elasticsearch-plugin-hq
-    SUBDIR += elasticsearch-plugin-marvel
-    SUBDIR += elasticsearch-plugin-migration
-    SUBDIR += elasticsearch-plugin-sql
-    SUBDIR += elasticsearch-river-rabbitmq
     SUBDIR += elasticsearch2
     SUBDIR += elasticsearch2-plugin-hq
     SUBDIR += elasticsearch2-plugin-marvel
@@ -165,7 +159,6 @@
     SUBDIR += elasticsearch2-plugin-sql
     SUBDIR += elasticsearch5
     SUBDIR += elasticsearch5-search-guard
-    SUBDIR += elasticsearch5-x-pack
     SUBDIR += elasticsearch6
     SUBDIR += elixir-earmark
     SUBDIR += elixir-ex_doc
@@ -389,7 +382,6 @@
     SUBDIR += kibana46
     SUBDIR += kibana5
     SUBDIR += kibana5-search-guard
-    SUBDIR += kibana5-x-pack
     SUBDIR += kibana6
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
