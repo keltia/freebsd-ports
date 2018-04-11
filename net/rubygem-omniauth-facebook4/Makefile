@@ -2,16 +2,19 @@
 # $FreeBSD$
 
 PORTNAME=	omniauth-facebook
-PORTVERSION=	5.0.0
+PORTVERSION=	4.0.0
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	4
 
-MAINTAINER=	ruby@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Facebook OAuth2 Strategy for OmniAuth
 
 LICENSE=	MIT
 
 RUN_DEPENDS=	rubygem-omniauth-oauth2>=1.2:net/rubygem-omniauth-oauth2
+
+PORTSCOUT=	limit:^4\.
 
 NO_ARCH=	yes
 USE_RUBY=	yes
