@@ -1,10 +1,10 @@
 # $FreeBSD$
 
 PORTNAME=	pgpool-II
-PORTVERSION=	3.6.10
+PORTVERSION=	3.7.3
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgpool.net/mediawiki/images/
-PKGNAMESUFFIX=	36
+PKGNAMESUFFIX=	37
 
 MAINTAINER=	tz@FreeBSD.org
 COMMENT=	Connection pool server for PostgreSQL
@@ -15,9 +15,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BROKEN_SSL=	openssl-devel
 BROKEN_SSL_REASON_openssl-devel=	library 'ssl' is required for OpenSSL
 
-PORTSCOUT=	limit:^3.6.[0-9]*
+PORTSCOUT=	limit:^3.7.[0-9]*
 
-USES=		gmake libtool pgsql:9.3+
+USES=		gmake libtool pgsql:9.6+
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
