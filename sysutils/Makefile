@@ -434,6 +434,7 @@
     SUBDIR += gnome-system-monitor
     SUBDIR += gnome_subr
     SUBDIR += goaccess
+    SUBDIR += gomplate
     SUBDIR += google-compute-engine-oslogin
     SUBDIR += goss
     SUBDIR += gpart
@@ -1184,6 +1185,7 @@
     SUBDIR += snmp_exporter
     SUBDIR += snooze
     SUBDIR += snowlog
+    SUBDIR += sockaddr
     SUBDIR += socket
     SUBDIR += socklog
     SUBDIR += solaar
