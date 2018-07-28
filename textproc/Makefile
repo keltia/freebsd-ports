@@ -950,7 +950,10 @@
     SUBDIR += p5-Text-SpellChecker
     SUBDIR += p5-Text-Striphigh
     SUBDIR += p5-Text-Table
+    SUBDIR += p5-Text-Table-ASV
+    SUBDIR += p5-Text-Table-Any
     SUBDIR += p5-Text-Table-Manifold
+    SUBDIR += p5-Text-Table-Tiny
     SUBDIR += p5-Text-Tabs+Wrap
     SUBDIR += p5-Text-TabularDisplay
     SUBDIR += p5-Text-Tags
@@ -1298,6 +1301,7 @@
     SUBDIR += py-et_xmlfile
     SUBDIR += py-excelerator
     SUBDIR += py-feedparser
+    SUBDIR += py-fingerprints
     SUBDIR += py-gambit-elasticsearch
     SUBDIR += py-genshi
     SUBDIR += py-gensim
@@ -1329,6 +1333,7 @@
     SUBDIR += py-mkdocs-nature
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-nltk
+    SUBDIR += py-normality
     SUBDIR += py-numpydoc
     SUBDIR += py-openpyxl
     SUBDIR += py-openstackdocstheme
