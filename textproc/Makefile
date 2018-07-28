@@ -1316,6 +1316,7 @@
     SUBDIR += py-libtre
     SUBDIR += py-libxml2
     SUBDIR += py-libxslt
+    SUBDIR += py-license-expression
     SUBDIR += py-ltxml
     SUBDIR += py-m2r
     SUBDIR += py-mako
@@ -1333,6 +1334,7 @@
     SUBDIR += py-openstackdocstheme
     SUBDIR += py-orange3-text
     SUBDIR += py-os-api-ref
+    SUBDIR += py-packageurl-python
     SUBDIR += py-pager
     SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
@@ -1340,10 +1342,12 @@
     SUBDIR += py-parsimonious
     SUBDIR += py-parso
     SUBDIR += py-pdfminer
+    SUBDIR += py-pdfminer.six
     SUBDIR += py-pdfminer3k
     SUBDIR += py-pdfrw
     SUBDIR += py-pss
     SUBDIR += py-pyPEG2
+    SUBDIR += py-pyahocorasick
     SUBDIR += py-pyaml
     SUBDIR += py-pyctpp2
     SUBDIR += py-pyes

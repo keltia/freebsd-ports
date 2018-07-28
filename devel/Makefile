@@ -4362,6 +4362,7 @@
     SUBDIR += py-backports
     SUBDIR += py-backports.csv
     SUBDIR += py-backports.functools_lru_cache
+    SUBDIR += py-backports.os
     SUBDIR += py-backports.shutil_get_terminal_size
     SUBDIR += py-backports.tempfile
     SUBDIR += py-backports.weakref
@@ -4370,6 +4371,7 @@
     SUBDIR += py-bcdoc
     SUBDIR += py-bidict
     SUBDIR += py-billiard
+    SUBDIR += py-binaryornot
     SUBDIR += py-biplist
     SUBDIR += py-bison
     SUBDIR += py-bitarray
@@ -4379,6 +4381,7 @@
     SUBDIR += py-blinker
     SUBDIR += py-blist
     SUBDIR += py-bluelet
+    SUBDIR += py-boolean.py
     SUBDIR += py-boto
     SUBDIR += py-botocore
     SUBDIR += py-bsd
@@ -4607,6 +4610,7 @@
     SUBDIR += py-iniparse
     SUBDIR += py-initgroups
     SUBDIR += py-instant
+    SUBDIR += py-intbitset
     SUBDIR += py-interface
     SUBDIR += py-intervaltree
     SUBDIR += py-invoke
@@ -4879,6 +4883,7 @@
     SUBDIR += py-pylru
     SUBDIR += py-pylru-cache
     SUBDIR += py-pymarc
+    SUBDIR += py-pymaven-patch
     SUBDIR += py-pympler
     SUBDIR += py-pymtbl
     SUBDIR += py-pyopencl
