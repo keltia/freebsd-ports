@@ -415,6 +415,7 @@
     SUBDIR += cx_Freeze
     SUBDIR += cxmon
     SUBDIR += cxref
+    SUBDIR += cxxopts
     SUBDIR += cxxtest
     SUBDIR += cxxtools
     SUBDIR += d-feet
@@ -6328,6 +6329,7 @@
     SUBDIR += z80-asm
     SUBDIR += z80asm
     SUBDIR += z80ex
+    SUBDIR += zapcc
     SUBDIR += zeal
     SUBDIR += zookeeper
     SUBDIR += zpu-binutils
