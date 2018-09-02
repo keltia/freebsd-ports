@@ -1,19 +1,18 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	confusable_homoglyphs
-PORTVERSION=	3.2.0
-CATEGORIES=	devel python
+PORTNAME=	django-modern-rpc
+PORTVERSION=	0.11.1
+CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Detect confusable usage of unicode homoglyphs
+COMMENT=	Simple and modern JSON-RPC and XML-RPC server implementation for Django
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}click>=0:devel/py-click@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django111>=1.8.0:www/py-django111@${PY_FLAVOR}
 
 USES=		python
 USE_PYTHON=	autoplist concurrent distutils
