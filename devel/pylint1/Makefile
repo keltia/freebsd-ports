@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	pylint
-PORTVERSION=	2.1.1
+PORTVERSION=	1.9.3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
-PKGNAMESUFFIX=	${PYTHON_PKGNAMESUFFIX}
+PKGNAMESUFFIX=	1${PYTHON_PKGNAMESUFFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Analyzes python source code looking for bugs and signs of poor quality
@@ -19,8 +19,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}astroid>=1.6:devel/py-astroid@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mccabe>=0:devel/py-mccabe@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>=0:devel/py-six@${PY_FLAVOR}
 
-USES=		python:3.4+ shebangfix
-USE_PYTHON=	distutils py3kplist
+PORTSCOUT=	limit:^1\.
+
+USES=		python shebangfix
+USE_PYTHON=	concurrent distutils py3kplist
 
 NO_ARCH=	yes
 
