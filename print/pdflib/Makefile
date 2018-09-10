@@ -13,7 +13,7 @@ COMMENT=	C library for dynamically generating PDF
 
 RESTRICTED=	Many odd restrictions on usage and distribution
 
-OPTIONS_DEFINE=	PERL JAVA
+OPTIONS_DEFINE=	PERL JAVA DOCS
 PERL_DESC=	Build perl bindings
 JAVA_DESC=	Build Java bindings
 
@@ -29,11 +29,11 @@ PERL_USES=	perl5
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPERL}
-PLIST_SUB=	PERL=""
+PLIST_SUB+=	PERL=""
 CONFIGURE_ARGS+=--with-perl=${PERL}
 .else
 CONFIGURE_ARGS+=--with-perl=no
-PLIST_SUB=	PERL="@comment "
+PLIST_SUB+=	PERL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MJAVA}
