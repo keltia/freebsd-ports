@@ -29,6 +29,8 @@
     SUBDIR += atom
     SUBDIR += atompaw
     SUBDIR += avogadro
+    SUBDIR += avogadro2
+    SUBDIR += avogadrolibs
     SUBDIR += bagel
     SUBDIR += bddsolve
     SUBDIR += bft
