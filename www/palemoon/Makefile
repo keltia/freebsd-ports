@@ -4,6 +4,7 @@
 PORTNAME=	palemoon
 DISTVERSION=	27.9.4
 DISTVERSIONSUFFIX=_Release
+PORTREVISION=	1
 CATEGORIES=	www ipv6
 
 MAINTAINER=	lichray@gmail.com
@@ -29,8 +30,6 @@ GH_PROJECT=	Pale-Moon
 USE_GECKO=	gecko
 MOZ_PKGCONFIG_FILES=	# empty
 USE_MOZILLA=	-soundtouch
-
-USE_GL=		gl
 
 PM_ICON=	${PORTNAME}.png
 PM_ICON_SRC=	${PREFIX}/lib/${PORTNAME}/browser/icons/mozicon128.png
