@@ -28,6 +28,7 @@
     SUBDIR += cdent
     SUBDIR += ceylon
     SUBDIR += cfortran
+    SUBDIR += chaiscript
     SUBDIR += chez-scheme
     SUBDIR += chibi-scheme
     SUBDIR += chicken
@@ -104,7 +105,6 @@
     SUBDIR += gcc5
     SUBDIR += gcc6
     SUBDIR += gcc6-aux
-    SUBDIR += gcc6-devel
     SUBDIR += gcc7
     SUBDIR += gcc7-devel
     SUBDIR += gcc8
@@ -112,6 +112,7 @@
     SUBDIR += gcc9-devel
     SUBDIR += gforth
     SUBDIR += ghc
+    SUBDIR += ghc843
     SUBDIR += gjs
     SUBDIR += gnat_util
     SUBDIR += gnatcross-aarch64
