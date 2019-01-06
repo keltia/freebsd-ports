@@ -1786,7 +1786,7 @@ INSTALL_TARGET:=	${INSTALL_TARGET:S/^install-strip$/install/g}
 MAKE_ENV+=	NO_PIE=yes
 # We will control debug files.  Don't let builds that use /usr/share/mk
 # split out debug symbols since the plist won't know to expect it.
-MAKE_ENV+=	MK_DEBUG_FILES=no
+#MAKE_ENV+=	MK_DEBUG_FILES=no
 MAKE_ENV+=	MK_KERNEL_SYMBOLS=no
 
 CONFIGURE_SHELL?=	${SH}
