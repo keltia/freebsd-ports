@@ -780,6 +780,7 @@
     SUBDIR += git-lite
     SUBDIR += git-merge-changelog
     SUBDIR += git-modes
+    SUBDIR += git-remote-hg
     SUBDIR += git-review
     SUBDIR += git-subversion
     SUBDIR += git-town
@@ -5406,6 +5407,7 @@
     SUBDIR += readline
     SUBDIR += rebar
     SUBDIR += rebar3
+    SUBDIR += redo
     SUBDIR += regexx
     SUBDIR += regexxer
     SUBDIR += relx
