@@ -1,16 +1,16 @@
+# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	aws-sdk-resources
-DISTVERSION=	2.11.207
+PORTNAME=	opentracing
+PORTVERSION=	0.5.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	AWS SDK for Ruby Resources
+COMMENT=	OpenTracing Ruby Platform API
 
 LICENSE=	APACHE20
-
-RUN_DEPENDS=	rubygem-aws-sdk-core>=${PORTVERSION}:devel/rubygem-aws-sdk-core
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		gem
 USE_RUBY=	yes

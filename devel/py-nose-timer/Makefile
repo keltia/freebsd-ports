@@ -1,22 +1,23 @@
-# Created by: Joseph Koshy <jkoshy@FreeBSD.org>
+# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	fonttools
-PORTVERSION=	3.36.0
-CATEGORIES=	print python
+PORTNAME=	nose-timer
+PORTVERSION=	0.7.4
+CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Open source library for manipulating fonts, written in Python
+COMMENT=	Timer plugin for nosetests
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python zip
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>=0:devel/py-nose@${PY_FLAVOR}
+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
-MAKE_ENV=	FONTTOOLS_MANPATH="man"
 NO_ARCH=	yes
 
 .include <bsd.port.mk>
