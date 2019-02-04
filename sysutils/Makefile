@@ -402,7 +402,6 @@
     SUBDIR += fusefs-squashfuse
     SUBDIR += fusefs-sshfs
     SUBDIR += fusefs-unionfs
-    SUBDIR += fusefs-wdfs
     SUBDIR += fusefs-webdavfs
     SUBDIR += fusefs-wikipediafs
     SUBDIR += fusefs-zip
@@ -491,12 +490,9 @@
     SUBDIR += hpacucli
     SUBDIR += hploscripts
     SUBDIR += hptcli
-    SUBDIR += hs-angel
     SUBDIR += hs-cpu
     SUBDIR += hs-disk-free-space
-    SUBDIR += hs-ekg
     SUBDIR += hs-ekg-core
-    SUBDIR += hs-ekg-json
     SUBDIR += hs-mountpoints
     SUBDIR += hstr
     SUBDIR += htop
