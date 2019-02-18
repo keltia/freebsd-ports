@@ -357,6 +357,7 @@
     SUBDIR += cons-test
     SUBDIR += containers
     SUBDIR += cook
+    SUBDIR += corrade
     SUBDIR += courier-unicode
     SUBDIR += coursier
     SUBDIR += covtool
@@ -4714,6 +4715,7 @@
     SUBDIR += py-json-py
     SUBDIR += py-json-sempai
     SUBDIR += py-json_tricks
+    SUBDIR += py-jsondiff
     SUBDIR += py-jsonform
     SUBDIR += py-jsonlib
     SUBDIR += py-jsonlib2
