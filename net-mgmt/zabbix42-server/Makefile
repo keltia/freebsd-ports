@@ -1,8 +1,8 @@
 # Created by: Pakhom Golynga <pg@pakhom.spb.ru>
 # $FreeBSD$
 
-PORTNAME=	zabbix4
-PORTVERSION=	4.0.7
+PORTNAME=	zabbix42
+PORTVERSION=	4.2.1
 PORTREVISION?=	0
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/zabbix/ZABBIX%20Latest%20Stable/${PORTVERSION}
@@ -10,14 +10,16 @@ PKGNAMESUFFIX?=	-server
 DISTNAME=	zabbix-${PORTVERSION}
 
 MAINTAINER=	pg@pakhom.spb.ru
-COMMENT=	Enterprise-class open source distributed monitoring (${PKGNAMESUFFIX:S/^-//}) LTS
+COMMENT=	Enterprise-class open source distributed monitoring (${PKGNAMESUFFIX:S/^-//})
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libpcre.so:devel/pcre
 
-CONFLICTS=	zabbix[0-9][0-9]${PKGNAMESUFFIX} zabbix[0-35-9]${PKGNAMESUFFIX}
+CONFLICTS=	zabbix[0-35-9][0-9]${PKGNAMESUFFIX} \
+		zabbix4[0-13-9]${PKGNAMESUFFIX} \
+		zabbix[0-9]${PKGNAMESUFFIX}
 
 ZABBIX_BUILD=	${PKGNAMESUFFIX:S/^-//}
 

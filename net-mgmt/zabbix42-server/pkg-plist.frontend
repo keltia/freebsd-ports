@@ -43,6 +43,11 @@
 %%WWWDIR%%/app/controllers/CControllerPopupGeneric.php
 %%WWWDIR%%/app/controllers/CControllerPopupHttpStep.php
 %%WWWDIR%%/app/controllers/CControllerPopupMedia.php
+%%WWWDIR%%/app/controllers/CControllerPopupMediatypeTestEdit.php
+%%WWWDIR%%/app/controllers/CControllerPopupMediatypeTestSend.php
+%%WWWDIR%%/app/controllers/CControllerPopupPreprocTest.php
+%%WWWDIR%%/app/controllers/CControllerPopupPreprocTestEdit.php
+%%WWWDIR%%/app/controllers/CControllerPopupPreprocTestSend.php
 %%WWWDIR%%/app/controllers/CControllerPopupScriptExec.php
 %%WWWDIR%%/app/controllers/CControllerPopupServices.php
 %%WWWDIR%%/app/controllers/CControllerPopupTestTriggerExpr.php
@@ -65,6 +70,7 @@
 %%WWWDIR%%/app/controllers/CControllerScriptEdit.php
 %%WWWDIR%%/app/controllers/CControllerScriptList.php
 %%WWWDIR%%/app/controllers/CControllerScriptUpdate.php
+%%WWWDIR%%/app/controllers/CControllerSearch.php
 %%WWWDIR%%/app/controllers/CControllerSystemWarning.php
 %%WWWDIR%%/app/controllers/CControllerTimeSelectorUpdate.php
 %%WWWDIR%%/app/controllers/CControllerTrigDescUpdate.php
@@ -149,6 +155,10 @@
 %%WWWDIR%%/app/views/popup.httpstep.php
 %%WWWDIR%%/app/views/popup.media.js.php
 %%WWWDIR%%/app/views/popup.media.php
+%%WWWDIR%%/app/views/popup.mediatypetest.edit.js.php
+%%WWWDIR%%/app/views/popup.mediatypetest.edit.php
+%%WWWDIR%%/app/views/popup.preproctestedit.view.js.php
+%%WWWDIR%%/app/views/popup.preproctestedit.view.php
 %%WWWDIR%%/app/views/popup.scriptexec.php
 %%WWWDIR%%/app/views/popup.services.php
 %%WWWDIR%%/app/views/popup.testtriggerexpr.php
@@ -158,6 +168,7 @@
 %%WWWDIR%%/app/views/popup.triggerwizard.php
 %%WWWDIR%%/app/views/report.services.php
 %%WWWDIR%%/app/views/report.status.php
+%%WWWDIR%%/app/views/search.php
 %%WWWDIR%%/app/views/system.warning.php
 %%WWWDIR%%/applications.php
 %%WWWDIR%%/audio/alarm_average.wav
@@ -229,6 +240,7 @@
 %%WWWDIR%%/include/classes/api/clients/CApiClient.php
 %%WWWDIR%%/include/classes/api/clients/CLocalApiClient.php
 %%WWWDIR%%/include/classes/api/CRelationMap.php
+%%WWWDIR%%/include/classes/api/helpers/CApiTagHelper.php
 %%WWWDIR%%/include/classes/api/managers/CApplicationManager.php
 %%WWWDIR%%/include/classes/api/managers/CGraphManager.php
 %%WWWDIR%%/include/classes/api/managers/CGraphPrototypeManager.php
@@ -340,6 +352,7 @@
 %%WWWDIR%%/include/classes/html/CButtonDelete.php
 %%WWWDIR%%/include/classes/html/CButtonQMessage.php
 %%WWWDIR%%/include/classes/html/CCheckBox.php
+%%WWWDIR%%/include/classes/html/CCheckBoxList.php
 %%WWWDIR%%/include/classes/html/CClock.php
 %%WWWDIR%%/include/classes/html/CCol.php
 %%WWWDIR%%/include/classes/html/CColHeader.php
@@ -366,6 +379,7 @@
 %%WWWDIR%%/include/classes/html/CList.php
 %%WWWDIR%%/include/classes/html/CListBox.php
 %%WWWDIR%%/include/classes/html/CListItem.php
+%%WWWDIR%%/include/classes/html/CMultilineInput.php
 %%WWWDIR%%/include/classes/html/CMultiSelect.php
 %%WWWDIR%%/include/classes/html/CNavigationTree.php
 %%WWWDIR%%/include/classes/html/CNumericBox.php
@@ -428,6 +442,7 @@
 %%WWWDIR%%/include/classes/import/converters/C30ImportConverter.php
 %%WWWDIR%%/include/classes/import/converters/C32ImportConverter.php
 %%WWWDIR%%/include/classes/import/converters/C34ImportConverter.php
+%%WWWDIR%%/include/classes/import/converters/C40ImportConverter.php
 %%WWWDIR%%/include/classes/import/converters/CConverter.php
 %%WWWDIR%%/include/classes/import/converters/CConverterChain.php
 %%WWWDIR%%/include/classes/import/converters/CImportConverterFactory.php
@@ -448,6 +463,7 @@
 %%WWWDIR%%/include/classes/import/validators/C32XmlValidator.php
 %%WWWDIR%%/include/classes/import/validators/C34XmlValidator.php
 %%WWWDIR%%/include/classes/import/validators/C40XmlValidator.php
+%%WWWDIR%%/include/classes/import/validators/C42XmlValidator.php
 %%WWWDIR%%/include/classes/import/validators/CXmlValidator.php
 %%WWWDIR%%/include/classes/import/validators/CXmlValidatorGeneral.php
 %%WWWDIR%%/include/classes/items/CHelpItems.php
@@ -484,6 +500,8 @@
 %%WWWDIR%%/include/classes/parsers/CMacroFunctionParser.php
 %%WWWDIR%%/include/classes/parsers/CMacroParser.php
 %%WWWDIR%%/include/classes/parsers/CParser.php
+%%WWWDIR%%/include/classes/parsers/CPrometheusOutputParser.php
+%%WWWDIR%%/include/classes/parsers/CPrometheusPatternParser.php
 %%WWWDIR%%/include/classes/parsers/CRangeParser.php
 %%WWWDIR%%/include/classes/parsers/CRangesParser.php
 %%WWWDIR%%/include/classes/parsers/CRangeTimeParser.php
@@ -712,13 +730,16 @@
 %%WWWDIR%%/include/views/configuration.item.massupdate.php
 %%WWWDIR%%/include/views/configuration.item.prototype.edit.php
 %%WWWDIR%%/include/views/configuration.item.prototype.list.php
+%%WWWDIR%%/include/views/configuration.item.prototype.massupdate.php
 %%WWWDIR%%/include/views/configuration.maintenance.edit.php
 %%WWWDIR%%/include/views/configuration.maintenance.list.php
 %%WWWDIR%%/include/views/configuration.services.edit.php
 %%WWWDIR%%/include/views/configuration.services.list.php
 %%WWWDIR%%/include/views/configuration.services.parent.list.php
+%%WWWDIR%%/include/views/configuration.tags.tab.php
 %%WWWDIR%%/include/views/configuration.template.edit.php
 %%WWWDIR%%/include/views/configuration.template.list.php
+%%WWWDIR%%/include/views/configuration.template.massupdate.php
 %%WWWDIR%%/include/views/configuration.trigger.prototype.edit.php
 %%WWWDIR%%/include/views/configuration.trigger.prototype.list.php
 %%WWWDIR%%/include/views/configuration.trigger.prototype.massupdate.php
@@ -761,9 +782,15 @@
 %%WWWDIR%%/include/views/js/configuration.item.prototype.edit.js.php
 %%WWWDIR%%/include/views/js/configuration.maintenance.edit.js.php
 %%WWWDIR%%/include/views/js/configuration.services.edit.js.php
+%%WWWDIR%%/include/views/js/configuration.tags.tab.js.php
+%%WWWDIR%%/include/views/js/configuration.template.list.js.php
+%%WWWDIR%%/include/views/js/configuration.template.massupdate.js.php
+%%WWWDIR%%/include/views/js/configuration.trigger.massupdate.js.php
 %%WWWDIR%%/include/views/js/configuration.triggers.edit.js.php
 %%WWWDIR%%/include/views/js/configuration.triggers.list.js.php
+%%WWWDIR%%/include/views/js/editabletable.js.php
 %%WWWDIR%%/include/views/js/hostmacros.js.php
+%%WWWDIR%%/include/views/js/item.preprocessing.js.php
 %%WWWDIR%%/include/views/js/monitoring.latest.js.php
 %%WWWDIR%%/include/views/js/monitoring.screen.edit.js.php
 %%WWWDIR%%/include/views/js/monitoring.slideconf.edit.js.php
@@ -824,6 +851,7 @@
 %%WWWDIR%%/js/layout.mode.js
 %%WWWDIR%%/js/main.js
 %%WWWDIR%%/js/menupopup.js
+%%WWWDIR%%/js/multilineinput.js
 %%WWWDIR%%/js/multiselect.js
 %%WWWDIR%%/js/pages/items.js
 %%WWWDIR%%/js/servercheck.js
@@ -920,7 +948,6 @@
 %%WWWDIR%%/screenconf.php
 %%WWWDIR%%/screenedit.php
 %%WWWDIR%%/screens.php
-%%WWWDIR%%/search.php
 %%WWWDIR%%/services.php
 %%WWWDIR%%/setup.php
 %%WWWDIR%%/slideconf.php
