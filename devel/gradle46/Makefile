@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	gradle
-PORTVERSION=	4.10.3
+PORTVERSION=	4.6
 CATEGORIES=	devel java
 MASTER_SITES=	https://downloads.gradle.org/distributions/
-PKGNAMESUFFIX=	4
+PKGNAMESUFFIX=	46
 EXTRACT_SUFX=	-bin.zip
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Project automation tool
 
 LICENSE=	APACHE20
