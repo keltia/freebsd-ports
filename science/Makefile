@@ -232,6 +232,8 @@
     SUBDIR += py-ase
     SUBDIR += py-avogadrolibs
     SUBDIR += py-cdo
+    SUBDIR += py-chainer
+    SUBDIR += py-chainer-chemistry
     SUBDIR += py-chempy
     SUBDIR += py-coards
     SUBDIR += py-dlib
