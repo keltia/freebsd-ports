@@ -2,17 +2,14 @@
 # $FreeBSD$
 
 PORTNAME?=	fetchmail
-PORTVERSION=	6.3.26
-PORTREVISION?=	11
+DISTVERSION=	6.4.0.rc2
 CATEGORIES=	mail ipv6
-MASTER_SITES=	SF/${PORTNAME}/branch_6.3/ \
-		http://mandree.home.pages.de/${PORTNAME}/
+MASTER_SITES=	SF/${PORTNAME}/branch_6.4/
+PKGNAMESUFFIX=	64
 
-PATCH_SITES=	https://src.fedoraproject.org/rpms/fetchmail/raw/master/f/:fedora
-PATCHFILES=	fetchmail-6.3.26-ssl-backport.patch:-p1:fedora
-
-MAINTAINER=	chalpin@cs.wisc.edu
-COMMENT?=	Batch mail retrieval utility for IMAP/POP3/ETRN/ODMR
+# chalpin@cs.wisc.edu has full permissions to this port except overriding MAINTAINER line.
+MAINTAINER=	mandree@FreeBSD.org
+COMMENT?=	Batch mail retrieval utility for IMAP/POP3/ETRN/ODMR - release candidate
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	dual
@@ -28,7 +25,7 @@ GROUPS=		${USERS}
 USE_RC_SUBR=	fetchmail
 SUB_FILES=	pkg-message
 
-CONFLICTS_INSTALL=	fetchmail-6.4*
+CONFLICTS_INSTALL=	fetchmail-6.3*
 
 GNU_CONFIGURE=	yes
 
@@ -37,14 +34,12 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-opie --enable-RPA --enable-SDPS \
 		--without-hesiod --enable-fallback=no \
 		--with-ssl=${OPENSSLBASE} PYTHON=:
-# In case the user had an SSL-v2-capable SSL build, disable it:
-CONFIGURE_ENV=	ac_cv_have_decl_SSLv2_client_method=no
 
 # -Wl,--as-needed suppresses unneeded library references,
 # for instance, libcom_err.so on GSSAPI_NONE builds:
 LDFLAGS+=	-L${LOCALBASE}/lib -Wl,--as-needed
 
-OPTIONS_DEFINE=	NLS NTLM POP2 DOCS
+OPTIONS_DEFINE=	NLS DOCS
 OPTIONS_SINGLE=	GSSAPI
 OPTIONS_SINGLE_GSSAPI=	GSSAPI_BASE GSSAPI_HEIMDAL GSSAPI_MIT GSSAPI_NONE
 OPTIONS_DEFAULT=	GSSAPI_BASE
@@ -58,20 +53,13 @@ GSSAPI_MIT_USES=	gssapi:mit
 GSSAPI_MIT_CONFIGURE_ON=	--with-kerberos5=${GSSAPIBASEDIR} ${GSSAPI_CONFIGURE_ARGS}
 GSSAPI_NONE_CONFIGURE_ON=	--without-gssapi
 
-POP2_DESC=	POP2 Protocol support [obsolete]
-
 NLS_USES=	gettext
 NLS_CONFIGURE_ENABLE=	nls
 
-NTLM_CONFIGURE_ENABLE=	NTLM
-NTLM_PORTDOCS=		README.NTLM
-
-# POP2 is obsolete
-POP2_CONFIGURE_ENABLE=	POP2
-
-PORTDOCS=	FAQ FEATURES NEWS NOTES README README.SSL \
+PORTDOCS=	FAQ FEATURES NEWS NOTES OLDNEWS \
+		README README.SSL README.SSL-SERVER \
 		design-notes.html fetchmail-FAQ.html fetchmail-features.html \
-		esrs-design-notes.html
+		esrs-design-notes.html todo.html
 
 post-patch:
 .if !exists(/usr/lib/libcom_err.so)
@@ -79,12 +67,6 @@ post-patch:
 .endif
 
 .endif
-
-# this avoids rebuilding the autotools rigs, i. e. USES+=autoreconf.
-# It will clobber the AC_CHECK_DECLS([SSLv3_client_method],,,[#include <openssl/ssl.h>])
-# so we've put that into files/patch-configure as well:
-pre-configure:
-	@${TOUCH} -d 2010-01-01T00:00:00 ${WRKSRC}/configure.ac
 
 .if empty(MASTERDIR)
 post-build:
