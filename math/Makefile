@@ -150,6 +150,7 @@
     SUBDIR += blis
     SUBDIR += blitz++
     SUBDIR += blocksolve95
+    SUBDIR += bonmin
     SUBDIR += boolector
     SUBDIR += bsdnt
     SUBDIR += btor2tools
@@ -187,6 +188,7 @@
     SUBDIR += concorde
     SUBDIR += convertall
     SUBDIR += coq
+    SUBDIR += couenne
     SUBDIR += crlibm
     SUBDIR += cryptominisat
     SUBDIR += curv
@@ -853,6 +855,7 @@
     SUBDIR += superlu
     SUBDIR += superlu_mt
     SUBDIR += symmetrica
+    SUBDIR += symphony
     SUBDIR += tablix
     SUBDIR += taucs
     SUBDIR += tblis
