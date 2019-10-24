@@ -1,8 +1,9 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
 # $FreeBSD$
 
-PORTNAME=	octave-forge-splines
-PORTVERSION=	1.3.3
+PORTNAME=	octave-forge-fits
+PORTVERSION=	1.0.7
+PORTREVISION=	12
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -15,14 +16,11 @@ LICENSE_FILE=	${WRKDIR}/${OCTSRC}/COPYING
 # It is usually ${OCTAVE_PKGNAME} or ${DISTNAME}.
 OCTSRC=		${DISTNAME}
 
-WRKSRC=		${WRKDIR}/${OCTSRC}/src
+WRKSRC=	${WRKDIR}/${OCTSRC}/src
+
+LIB_DEPENDS+=	libcfitsio.so:astro/cfitsio
 
 .include "${.CURDIR}/../../Mk/bsd.octave.mk"
-
-do-build:
-	@${DO_NADA}
-
-NO_ARCH=	yes
 
 post-build:
 	${RM} ${WRKSRC}/Makefile ${WRKSRC}/configure
