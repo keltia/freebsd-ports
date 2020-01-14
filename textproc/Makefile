@@ -35,6 +35,7 @@
     SUBDIR += af-aspell
     SUBDIR += aft
     SUBDIR += agrep
+    SUBDIR += aha
     SUBDIR += aiksaurus
     SUBDIR += align
     SUBDIR += am-aspell
@@ -318,8 +319,6 @@
     SUBDIR += kf5-kcodecs
     SUBDIR += kf5-sonnet
     SUBDIR += kf5-syntax-highlighting
-    SUBDIR += kibana5
-    SUBDIR += kibana5-search-guard
     SUBDIR += kibana6
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
@@ -383,7 +382,6 @@
     SUBDIR += libucl
     SUBDIR += libunibreak
     SUBDIR += libuninameslist
-    SUBDIR += libutf8proc
     SUBDIR += libvisio01
     SUBDIR += libwapcaplet
     SUBDIR += libwpd010
@@ -399,9 +397,6 @@
     SUBDIR += libxslt-reference
     SUBDIR += libyaml
     SUBDIR += link-grammar
-    SUBDIR += linux-c6-aspell
-    SUBDIR += linux-c6-expat
-    SUBDIR += linux-c6-libxml2
     SUBDIR += linux-c7-aspell
     SUBDIR += linux-c7-expat
     SUBDIR += linux-c7-libxml2
@@ -509,7 +504,6 @@
     SUBDIR += p5-Dev-Bollocks
     SUBDIR += p5-Devel-TraceSAX
     SUBDIR += p5-DocSet
-    SUBDIR += p5-EBook-Tools
     SUBDIR += p5-Excel-Template
     SUBDIR += p5-Excel-Writer-XLSX
     SUBDIR += p5-File-Inplace
@@ -963,6 +957,7 @@
     SUBDIR += p5-Unicode-Escape
     SUBDIR += p5-Unicode-LineBreak
     SUBDIR += p5-Unicode-Normalize
+    SUBDIR += p5-Unicode-Tussle
     SUBDIR += p5-Unicode-Unihan
     SUBDIR += p5-Validator-Custom
     SUBDIR += p5-Version-Next
@@ -1171,16 +1166,6 @@
     SUBDIR += perl2html
     SUBDIR += permute
     SUBDIR += php-mecab
-    SUBDIR += php71-ctype
-    SUBDIR += php71-dom
-    SUBDIR += php71-enchant
-    SUBDIR += php71-pspell
-    SUBDIR += php71-simplexml
-    SUBDIR += php71-wddx
-    SUBDIR += php71-xml
-    SUBDIR += php71-xmlreader
-    SUBDIR += php71-xmlwriter
-    SUBDIR += php71-xsl
     SUBDIR += php72-ctype
     SUBDIR += php72-dom
     SUBDIR += php72-enchant
@@ -1248,6 +1233,7 @@
     SUBDIR += py-cmarkgfm
     SUBDIR += py-colorclass
     SUBDIR += py-creole
+    SUBDIR += py-cssselect2
     SUBDIR += py-csvkit
     SUBDIR += py-custom_inherit
     SUBDIR += py-dbfread
@@ -1404,7 +1390,9 @@
     SUBDIR += py-textfsm
     SUBDIR += py-texttable
     SUBDIR += py-tinycss
+    SUBDIR += py-tinycss2
     SUBDIR += py-toml
+    SUBDIR += py-tomlkit
     SUBDIR += py-toronado
     SUBDIR += py-towncrier
     SUBDIR += py-trans
@@ -1418,6 +1406,7 @@
     SUBDIR += py-wicked
     SUBDIR += py-wordnet
     SUBDIR += py-wstools
+    SUBDIR += py-wtf-peewee
     SUBDIR += py-wtforms
     SUBDIR += py-xhtml2pdf
     SUBDIR += py-xlrd
@@ -1485,12 +1474,14 @@
     SUBDIR += ruby-xmlparser
     SUBDIR += rubygem-actionpack-xml_parser
     SUBDIR += rubygem-actionpack-xml_parser1
+    SUBDIR += rubygem-actionpack-xml_parser52
     SUBDIR += rubygem-albino
     SUBDIR += rubygem-amatch
     SUBDIR += rubygem-asciidoctor
     SUBDIR += rubygem-asciidoctor-diagram
     SUBDIR += rubygem-asciidoctor-include-ext
     SUBDIR += rubygem-asciidoctor-plantuml
+    SUBDIR += rubygem-asciidoctor-plantuml009
     SUBDIR += rubygem-autoprefixer-rails
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
@@ -1513,11 +1504,11 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-diff-lcs
+    SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
     SUBDIR += rubygem-diffy31
     SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
-    SUBDIR += rubygem-elasticsearch503
     SUBDIR += rubygem-elasticsearch-api
     SUBDIR += rubygem-elasticsearch-api503
     SUBDIR += rubygem-elasticsearch-dsl
@@ -1529,6 +1520,7 @@
     SUBDIR += rubygem-elasticsearch-transport
     SUBDIR += rubygem-elasticsearch-transport503
     SUBDIR += rubygem-elasticsearch-xpack
+    SUBDIR += rubygem-elasticsearch503
     SUBDIR += rubygem-emot
     SUBDIR += rubygem-escape_utils
     SUBDIR += rubygem-escape_utils11
@@ -1590,6 +1582,7 @@
     SUBDIR += rubygem-parslet
     SUBDIR += rubygem-phone
     SUBDIR += rubygem-pretty-xml
+    SUBDIR += rubygem-puppet-strings
     SUBDIR += rubygem-raabro
     SUBDIR += rubygem-rails-dom-testing
     SUBDIR += rubygem-rails-dom-testing-rails5
@@ -1613,6 +1606,7 @@
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rouge2
+    SUBDIR += rubygem-rouge312
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -1830,8 +1824,6 @@
     SUBDIR += xml-format
     SUBDIR += xml-i18n-tools
     SUBDIR += xml-lite.el
-    SUBDIR += xml-parse.el
-    SUBDIR += xml2
     SUBDIR += xml2rfc
     SUBDIR += xmlada
     SUBDIR += xmlcatmgr

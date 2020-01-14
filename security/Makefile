@@ -20,6 +20,7 @@
     SUBDIR += afl
     SUBDIR += afl++
     SUBDIR += afterglow
+    SUBDIR += age
     SUBDIR += aide
     SUBDIR += akmos
     SUBDIR += amap
@@ -86,7 +87,6 @@
     SUBDIR += cl-md5-sbcl
     SUBDIR += clamassassin
     SUBDIR += clamav
-    SUBDIR += clamav-milter
     SUBDIR += clamav-unofficial-sigs
     SUBDIR += clamd-stream-client
     SUBDIR += clamfs
@@ -149,6 +149,7 @@
     SUBDIR += fakebo
     SUBDIR += fakeident
     SUBDIR += fakeroot
+    SUBDIR += farmhash
     SUBDIR += fbopenssl
     SUBDIR += fcheck
     SUBDIR += fcrackzip
@@ -238,7 +239,7 @@
     SUBDIR += john
     SUBDIR += kbfsd
     SUBDIR += kc24
-    SUBDIR += kdbx-viewer
+    SUBDIR += kdbxviewer
     SUBDIR += kedpm
     SUBDIR += keepass
     SUBDIR += keepass-plugin-keepassrpc
@@ -257,6 +258,7 @@
     SUBDIR += knocker
     SUBDIR += kpcli
     SUBDIR += kpkpass
+    SUBDIR += kpmenu
     SUBDIR += krb5
     SUBDIR += krb5-115
     SUBDIR += krb5-116
@@ -302,7 +304,7 @@
     SUBDIR += libpwstor
     SUBDIR += libressl
     SUBDIR += libressl-devel
-    SUBDIR += libscep 
+    SUBDIR += libscep
     SUBDIR += libscrypt
     SUBDIR += libsecret
     SUBDIR += libsectok
@@ -316,16 +318,6 @@
     SUBDIR += libwhisker
     SUBDIR += libyubikey
     SUBDIR += libzrtpcppcore
-    SUBDIR += linux-c6-audit-libs
-    SUBDIR += linux-c6-cyrus-sasl2
-    SUBDIR += linux-c6-gnutls
-    SUBDIR += linux-c6-libgcrypt
-    SUBDIR += linux-c6-libgpg-error
-    SUBDIR += linux-c6-libssh2
-    SUBDIR += linux-c6-libtasn1
-    SUBDIR += linux-c6-nss
-    SUBDIR += linux-c6-openssl
-    SUBDIR += linux-c6-pam
     SUBDIR += linux-c7-cyrus-sasl2
     SUBDIR += linux-c7-gnutls
     SUBDIR += linux-c7-libgcrypt
@@ -412,7 +404,6 @@
     SUBDIR += openssh-portable
     SUBDIR += openssl
     SUBDIR += openssl-unsafe
-    SUBDIR += openssl111
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas8
     SUBDIR += openvas8-cli
@@ -447,6 +438,7 @@
     SUBDIR += p11-kit
     SUBDIR += p5-Alt-Crypt-RSA-BigInt
     SUBDIR += p5-Apache-Htpasswd
+    SUBDIR += p5-App-Acmeman
     SUBDIR += p5-App-Genpass
     SUBDIR += p5-App-TLSMe
     SUBDIR += p5-Auth-YubikeyDecrypter
@@ -525,6 +517,7 @@
     SUBDIR += p5-Crypt-GeneratePassword
     SUBDIR += p5-Crypt-HCE_MD5
     SUBDIR += p5-Crypt-HCE_SHA
+    SUBDIR += p5-Crypt-HSXKPasswd
     SUBDIR += p5-Crypt-IDEA
     SUBDIR += p5-Crypt-Imail
     SUBDIR += p5-Crypt-Juniper
@@ -712,6 +705,7 @@
     SUBDIR += p5-openxpki-i18n
     SUBDIR += p5-plog
     SUBDIR += pad
+    SUBDIR += palisade
     SUBDIR += pam-modules
     SUBDIR += pam-mysql
     SUBDIR += pam-pgsql
@@ -786,10 +780,6 @@
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
     SUBDIR += pgpin
-    SUBDIR += php71-filter
-    SUBDIR += php71-hash
-    SUBDIR += php71-mcrypt
-    SUBDIR += php71-openssl
     SUBDIR += php72-filter
     SUBDIR += php72-hash
     SUBDIR += php72-openssl
@@ -888,6 +878,7 @@
     SUBDIR += py-cryptlib_py
     SUBDIR += py-cryptography
     SUBDIR += py-cryptography-vectors
+    SUBDIR += py-ctypescrypto
     SUBDIR += py-cybox
     SUBDIR += py-dfdatetime
     SUBDIR += py-dfvfs
@@ -1328,6 +1319,7 @@
     SUBDIR += yubikey-personalization-gui
     SUBDIR += yubioath-desktop
     SUBDIR += zebedee
+    SUBDIR += zeek
     SUBDIR += zenmap
     SUBDIR += zeronet
     SUBDIR += zxid

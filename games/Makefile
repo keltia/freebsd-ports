@@ -208,6 +208,8 @@
     SUBDIR += doom-wolfendoom
     SUBDIR += doomlegacy
     SUBDIR += doomsday
+    SUBDIR += dose-response
+    SUBDIR += dreamchess
     SUBDIR += drm
     SUBDIR += duckmaze
     SUBDIR += duel
@@ -390,6 +392,7 @@
     SUBDIR += hohlin
     SUBDIR += hoichess
     SUBDIR += holotz-castle
+    SUBDIR += homura
     SUBDIR += hoverboard-sdl
     SUBDIR += hs-scroll
     SUBDIR += hypatia_engine
@@ -405,6 +408,7 @@
     SUBDIR += ioquake3
     SUBDIR += ioquake3-server
     SUBDIR += iortcw
+    SUBDIR += iqpuzzle
     SUBDIR += irrlamb
     SUBDIR += ishido
     SUBDIR += ivan
@@ -546,6 +550,7 @@
     SUBDIR += mahjong
     SUBDIR += maitretarot
     SUBDIR += manaplus
+    SUBDIR += mancala
     SUBDIR += mangband
     SUBDIR += mari0
     SUBDIR += marsnomercy
@@ -788,9 +793,11 @@
     SUBDIR += qwdtools
     SUBDIR += r1q2
     SUBDIR += railroad-rampage
+    SUBDIR += rawgl
     SUBDIR += redeclipse
     SUBDIR += redeclipse-data
     SUBDIR += redorblack
+    SUBDIR += regoth
     SUBDIR += reminiscence
     SUBDIR += renpy
     SUBDIR += renpy6
@@ -850,6 +857,9 @@
     SUBDIR += simplevaders
     SUBDIR += simsu
     SUBDIR += simutrans
+    SUBDIR += simutrans-pak128
+    SUBDIR += simutrans-pak128.german
+    SUBDIR += simutrans-pak64
     SUBDIR += sjeng
     SUBDIR += ski
     SUBDIR += sl
@@ -878,7 +888,6 @@
     SUBDIR += stendhal
     SUBDIR += stockfish
     SUBDIR += stonesoup
-    SUBDIR += stonesoup-sdl
     SUBDIR += stormbaancoureur
     SUBDIR += stransball2
     SUBDIR += stratagus
@@ -971,6 +980,7 @@
     SUBDIR += vectoroids
     SUBDIR += vegastrike
     SUBDIR += vegastrike-data
+    SUBDIR += veloren
     SUBDIR += violetland
     SUBDIR += viruskiller
     SUBDIR += vitetris
@@ -980,6 +990,7 @@
     SUBDIR += volleyball
     SUBDIR += vor
     SUBDIR += vultures-eye
+    SUBDIR += vvvvvv
     SUBDIR += wanderer
     SUBDIR += wargus
     SUBDIR += warmux
@@ -1072,7 +1083,6 @@
     SUBDIR += xpat2
     SUBDIR += xpenguins
     SUBDIR += xpilot
-    SUBDIR += xpilot-ng-client
     SUBDIR += xpilot-ng-server
     SUBDIR += xpipeman
     SUBDIR += xpired
@@ -1103,7 +1113,6 @@
     SUBDIR += xtgyoretsu
     SUBDIR += xtic
     SUBDIR += xtriangles
-    SUBDIR += xtris
     SUBDIR += xtrojka
     SUBDIR += xtron
     SUBDIR += xtruco

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	xdg
-PORTVERSION=	3.1.0
+PORTVERSION=	3.1.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -19,5 +19,8 @@ USES=		gem
 USE_RUBY=	yes
 
 NO_ARCH=	yes
+
+# xdg 4.0.0+ requires ruby 2.7+
+PORTSCOUT=	limit:^3\.
 
 .include <bsd.port.mk>

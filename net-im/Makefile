@@ -3,6 +3,8 @@
 
     COMMENT = Instant messaging
 
+    SUBDIR += 6cord
+    SUBDIR += beebeep
     SUBDIR += centerim
     SUBDIR += centerim-devel
     SUBDIR += chattahoochie
@@ -110,7 +112,6 @@
     SUBDIR += pidgin-libnotify
     SUBDIR += pidgin-manualsize
     SUBDIR += pidgin-osd
-    SUBDIR += pidgin-privacy-please
     SUBDIR += pidgin-rocketchat
     SUBDIR += pidgin-sipe
     SUBDIR += pidgin-skypeweb

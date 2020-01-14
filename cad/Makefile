@@ -12,16 +12,19 @@
     SUBDIR += astk-serveur
     SUBDIR += atlc
     SUBDIR += basicdsp
-    SUBDIR += brickutils
+    SUBDIR += brlcad
     SUBDIR += calculix
     SUBDIR += calculix-ccx
+    SUBDIR += caneda
     SUBDIR += cascade
+    SUBDIR += cascade-compiler
     SUBDIR += chipvault
     SUBDIR += cura-engine
     SUBDIR += digital
     SUBDIR += dinotrace
     SUBDIR += electric
     SUBDIR += electric-ng
+    SUBDIR += elmerfem
     SUBDIR += fasm
     SUBDIR += feappv
     SUBDIR += fidocadj
@@ -31,6 +34,7 @@
     SUBDIR += gdsreader
     SUBDIR += gdt
     SUBDIR += geda
+    SUBDIR += gerbv
     SUBDIR += ghdl
     SUBDIR += gmsh
     SUBDIR += gnucap
@@ -54,12 +58,14 @@
     SUBDIR += kicad-library-templates
     SUBDIR += kicad-library-templates-devel
     SUBDIR += klayout
+    SUBDIR += ktechlab
     SUBDIR += ldraw
     SUBDIR += leocad
     SUBDIR += lepton-eda
     SUBDIR += libopencad
     SUBDIR += librecad
     SUBDIR += libredwg
+    SUBDIR += librepcb
     SUBDIR += linux-eagle5
     SUBDIR += linuxcnc-devel
     SUBDIR += logisim
@@ -72,6 +78,7 @@
     SUBDIR += openscad
     SUBDIR += openscad-devel
     SUBDIR += openvsp
+    SUBDIR += oregano
     SUBDIR += p5-GDS2
     SUBDIR += p5-Verilog-Perl
     SUBDIR += pcb
@@ -102,6 +109,7 @@
     SUBDIR += verilator
     SUBDIR += verilog-mode.el
     SUBDIR += xcircuit
+    SUBDIR += yosys
     SUBDIR += z88
     SUBDIR += zcad
 

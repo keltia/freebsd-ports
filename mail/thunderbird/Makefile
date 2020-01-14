@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	thunderbird
-DISTVERSION=	68.2.0
-PORTREVISION=	1
+DISTVERSION=	68.4.1
 CATEGORIES=	mail news net-im
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
 		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build1/source
@@ -13,7 +12,7 @@ MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Mozilla Thunderbird is standalone mail and news that stands above
 
 BUILD_DEPENDS=	nspr>=4.21:devel/nspr \
-		nss>=3.44.1:security/nss \
+		nss>=3.44.3:security/nss \
 		icu>=63.1,1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
 		harfbuzz>=2.4.0:print/harfbuzz \
@@ -29,7 +28,7 @@ BUILD_DEPENDS=	nspr>=4.21:devel/nspr \
 
 SSP_UNSAFE=	yes
 USE_GECKO=	gecko
-USE_MOZILLA=	-hunspell -vpx
+USE_MOZILLA=	-vpx
 
 USES=		tar:xz
 
@@ -55,7 +54,7 @@ MOZ_OPTIONS+=	--disable-calendar
 .endif
 
 post-extract:
-	@${SED} -e 's|@PORTNAME_ICON@|${PORTNAME_ICON}|;s|@MOZILLA@|${MOZILLA}|' \
+	@${SED} -e 's|@PORTNAME_ICON@|${PORTNAME_ICON:R}|;s|@MOZILLA@|${MOZILLA}|' \
 		<${FILESDIR}/thunderbird.desktop.in >${WRKDIR}/${MOZILLA_EXEC_NAME}.desktop
 
 post-patch:
