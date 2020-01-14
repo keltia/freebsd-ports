@@ -2,10 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	pysaml2
-PORTVERSION=	5.0.0
+PORTVERSION=	4.9.0
 CATEGORIES=	security devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	4
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python implementation of SAML Version 2
@@ -28,10 +29,12 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mock>=0:devel/py-mock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}responses>=0:devel/py-responses@${PY_FLAVOR}
 
-USES=		python:3.6+
-USE_PYTHON=	autoplist distutils
+USES=		python
+USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
+
+PORTSCOUT=	limit:^4\.
 
 do-test:
 	@(cd ${WRKSRC} && ${PYTHON_CMD} -m pytest)
