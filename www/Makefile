@@ -939,6 +939,7 @@
     SUBDIR += p5-HTTP-SimpleLinkChecker
     SUBDIR += p5-HTTP-Size
     SUBDIR += p5-HTTP-Thin
+    SUBDIR += p5-HTTP-Throwable
     SUBDIR += p5-HTTP-Tiny
     SUBDIR += p5-HTTP-Tiny-SPDY
     SUBDIR += p5-HTTP-Tiny-UA
@@ -1674,6 +1675,7 @@
     SUBDIR += py-h2
     SUBDIR += py-horizon
     SUBDIR += py-hpack
+    SUBDIR += py-hstspreload
     SUBDIR += py-html
     SUBDIR += py-html5-parser
     SUBDIR += py-html5lib
