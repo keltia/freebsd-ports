@@ -2,11 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	exabgp
-PORTVERSION=	3.4.25
-PORTREVISION=	2
+PORTVERSION=	4.2.4
 CATEGORIES=	net
 MASTER_SITES=	GH \
 		ZI
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	4
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	BGP engine and route injector
@@ -16,33 +17,40 @@ LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
 RUN_DEPENDS=	${PY_IPADDRESS}
 
-USES=		python:2.7
-USE_GITHUB=	yes
-GH_ACCOUNT=	Exa-Networks
-SUB_FILES=	pkg-message exabgp.sh
+USES=		python shebangfix
+USE_PYTHON=	distutils autoplist
+
+CONFLICTS_INSTALL=	exabgp-[0-9]*
+
+SUB_FILES=	pkg-message
 SUB_LIST=	PYTHON_LIBDIR=${PYTHON_LIBDIR} PYTHON_CMD=${PYTHON_CMD} \
 		PYTHON_SITELIBDIR=${PYTHON_SITELIBDIR}
 USE_RC_SUBR=	${PORTNAME}
 NO_ARCH=	yes
 
-CONFLICTS_INSTALL=	exabgp4-[0-9]*
+SHEBANG_FILES=	etc/exabgp/run/*.run etc/exabgp/run/*.pl \
+		etc/exabgp/run/*.py
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	Exa-Networks
 
 USERS=		_bgpd
 GROUPS=		_bgpd
 
 OPTIONS_DEFINE=	EXAMPLES
 
-post-extract:
-	@${MV} -f ${WRKSRC}/etc/systemd ${WRKSRC}
+post-patch:
+	@${REINPLACE_CMD} -e 's|exabgp.env|${ETCDIR}/exabgp.env|' \
+		${WRKSRC}/lib/exabgp/application/bgp.py
+	@${REINPLACE_CMD} -e 's|/etc/|${PREFIX}/etc/|' \
+		${WRKSRC}/doc/man/exabgp.1 \
+		${WRKSRC}/lib/exabgp/configuration/usage.py \
+		${WRKSRC}/lib/exabgp/configuration/process/parser.py \
+		${WRKSRC}/lib/exabgp/application/flow.py \
+		${WRKSRC}/lib/exabgp/application/healthcheck.py \
 
-do-build:
-	${PYTHON_CMD} -m compileall ${WRKSRC}/lib
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${STAGEDIR}${PREFIX}/sbin/${PORTNAME}
-	${INSTALL_MAN} ${WRKSRC}/doc/man/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/man/man1
+post-install:
 	@${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}/${PORTNAME} ${STAGEDIR}${ETCDIR}
-	(cd ${WRKSRC}/lib && ${COPYTREE_SHARE} . ${STAGEDIR}${PYTHON_SITELIBDIR})
 	${INSTALL_DATA} ${FILESDIR}/exabgp.env ${STAGEDIR}${ETCDIR}/exabgp.env.sample
 
 do-install-EXAMPLES-on:
