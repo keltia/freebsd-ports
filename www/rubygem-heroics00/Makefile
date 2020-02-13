@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	heroics
-PORTVERSION=	0.1.1
+PORTVERSION=	0.0.25
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	00
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby HTTP client generator for APIs represented with JSON schema
@@ -24,5 +25,7 @@ NO_ARCH=	yes
 
 PLIST_FILES=	bin/heroics-generate \
 		bin/heroku-api
+
+PORTSCOUT=	limit:^0\.0\.
 
 .include <bsd.port.mk>
