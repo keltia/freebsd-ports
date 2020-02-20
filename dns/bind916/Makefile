@@ -7,22 +7,17 @@ PORTVERSION=	${ISCVERSION:S/-P/P/:S/b/.b/:S/a/.a/:S/rc/.rc/}
 # dns/bind-tools here
 PORTREVISION=	0
 .else
-# XXX: correct version
-# dns/bind9xx here
+# dns/bind916 here
 PORTREVISION=	0
 .endif
 CATEGORIES=	dns net
-# XXX: put the ISC master_site
-#MASTER_SITES=	ISC/bind9/${ISCVERSION}
-MASTER_SITES=	LOCAL/mat/bind
+MASTER_SITES=	ISC/bind9/${ISCVERSION}
 .if defined(BIND_TOOLS_SLAVE)
 PKGNAMESUFFIX=	-tools
 .else
-# XXX: correct SUFFIX.
-PKGNAMESUFFIX=	9-devel
+PKGNAMESUFFIX=	916
 .endif
-# XXX: correct DISTNAME.
-#DISTNAME=	${PORTNAME}-${ISCVERSION}
+DISTNAME=	${PORTNAME}-${ISCVERSION}
 
 MAINTAINER=	mat@FreeBSD.org
 .if defined(BIND_TOOLS_SLAVE)
@@ -31,10 +26,9 @@ COMMENT=	Command line tools from BIND: delv, dig, host, nslookup...
 COMMENT=	BIND DNS suite with updated DNSSEC and DNS64
 .endif
 
-# Uncomment when bind9xx comes of age. +3 years if ESV, +1year otherwise, see
-# https://kb.isc.org/docs/aa-00896
+# Uncomment when bind920 comes of age.
 # DEPRECATED=	End of life, please migrate to a newer version of BIND9
-# EXPIRATION_DATE=	XXX-12-31
+# EXPIRATION_DATE=	2023-12-31
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
@@ -45,16 +39,9 @@ LIB_DEPENDS=	libuv.so:devel/libuv \
 RUN_DEPENDS=	bind-tools>0:dns/bind-tools
 .endif
 
-# XXX: remove tar:bz2
-USES=		compiler:c11 cpe libedit pkgconfig ssl tar:bz2
+USES=		compiler:c11 cpe libedit pkgconfig ssl tar:xz
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.15.8a0.2020.02.16
-# XXX: Remove gitlab
-USE_GITLAB=	yes
-GL_SITE=	https://gitlab.isc.org
-GL_ACCOUNT=	isc-projects
-GL_PROJECT=	bind9
-GL_COMMIT=	e4671ef2fa4f9764ddc11e95ed5f1bfa56a9e0d7
+ISCVERSION=	9.16.0
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -82,8 +69,7 @@ EXTRA_PATCHES=		${PATCHDIR}/extrapatch-no-bind-tools
 
 PORTDOCS=	*
 
-# XXX: Add -devel
-CONFLICTS=	bind911 bind912 bind913 bind914 bind916
+CONFLICTS=	bind911 bind912 bind913 bind914 bind9-devel
 .endif	# BIND_TOOLS_SLAVE
 
 MAKE_JOBS_UNSAFE=	yes
@@ -238,14 +224,7 @@ SUB_LIST+=	ENGINES=/usr/lib/engines
 SUB_LIST+=	ENGINES=${LOCALBASE}/lib/engines
 .endif
 
-# XXX: Remove
-post-extract:
-	echo "SRCID=${GL_COMMIT}" > ${WRKSRC}/srcid
-
-# XXX: Remove first REINPLACE_CMD
 post-patch:
-	@${REINPLACE_CMD} -e '/RELEASETYPE=/s#$$#-${GL_COMMIT}#' \
-		${WRKSRC}/version
 .for FILE in check/named-checkconf.8 named/named.8 nsupdate/nsupdate.1 \
 	rndc/rndc.8
 	@${REINPLACE_CMD} -e 's#/etc/named.conf#${ETCDIR}/named.conf#g' \
