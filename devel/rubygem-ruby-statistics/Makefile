@@ -1,15 +1,16 @@
 # Created by: Matthias Fechner <mfechner@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	graphql
-PORTVERSION=	1.9.19
+PORTNAME=	ruby-statistics
+PORTVERSION=	2.1.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
-COMMENT=	Plain-Ruby implementation of GraphQL
+COMMENT=	Provide ruby with statistical capabilities
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 USES=		gem
 USE_RUBY=	yes

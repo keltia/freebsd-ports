@@ -1,13 +1,13 @@
 # Created by: Matthias Fechner <mfechner@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	graphql
-PORTVERSION=	1.9.19
+PORTNAME=	slack-messenger
+PORTVERSION=	2.3.3
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
-COMMENT=	Plain-Ruby implementation of GraphQL
+COMMENT=	Slim ruby wrapper for posting to slack webhooks
 
 LICENSE=	MIT
 
