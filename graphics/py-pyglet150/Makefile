@@ -1,25 +1,23 @@
 # Created by: Dmitry Marakasov <amdmi3@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	flake8-quotes
-PORTVERSION=	3.0.0
-CATEGORIES=	devel
+PORTNAME=	pyglet
+PORTVERSION=	1.5.0
+CATEGORIES=	graphics multimedia x11-toolkits python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	150
 
 MAINTAINER=	amdmi3@FreeBSD.org
-COMMENT=	Flake8 lint for quotes
+COMMENT=	Cross-platform windowing and multimedia library
 
-LICENSE=	MIT
+LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flake8>=0:devel/py-flake8@${PY_FLAVOR}
+CONFLICTS_INSTALL=${PYTHON_PKGNAMEPREFIX}pyglet-*
 
-USES=		python
+USES=		python:3.5+ zip
 USE_PYTHON=	autoplist distutils
 NO_ARCH=	yes
-
-do-test:
-	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYDISTUTILS_SETUP} test
 
 .include <bsd.port.mk>
