@@ -1,23 +1,23 @@
 # Created by: Bernard Spil <brnrd@freebsd.org>
 # $FreeBSD$
 
-PORTNAME=	contacts
-PORTVERSION=	3.3.0
-DISTVERSIONPREFIX=	v
-CATEGORIES=	www
-MASTER_SITES=	https://github.com/${PKGNAMEPREFIX:S/-//}/${PORTNAME}/releases/download/${DISTVERSIONPREFIX}${PORTVERSION}/
+PORTNAME=	talk
+PORTVERSION=	8.0.7
+CATEGORIES=	net-im
+MASTER_SITES=	https://github.com/${PKGNAMEPREFIX:S/-//}/${DISTNAME:C/-.*//}/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	nextcloud-
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
-DISTNAME=	${PORTNAME}
-DIST_SUBDIR=	${PKGNAMEPREFIX:S/-//}/${DISTNAME}-${DISTVERSIONPREFIX}${PORTVERSION}
+DISTNAME=	spreed-${PORTVERSION}
+DIST_SUBDIR=	${PKGNAMEPREFIX:S/-//}/${DISTNAME}
+WRKSRC=		${WRKDIR}/spreed
 
 MAINTAINER=	brnrd@FreeBSD.org
-COMMENT=	Contacts app for Nextcloud
+COMMENT=	Online meeting app for Nextcloud
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-RUN_DEPENDS=	nextcloud${PHP_PKGNAMESUFFIX}>=15:www/nextcloud@${PHP_FLAVOR}
+RUN_DEPENDS=	nextcloud${PHP_PKGNAMESUFFIX}>=18:www/nextcloud@${PHP_FLAVOR}
 
 USES=		php:flavors
 NO_BUILD=	yes
