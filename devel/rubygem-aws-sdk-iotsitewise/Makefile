@@ -1,13 +1,13 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	aws-sdk-waf
-PORTVERSION=	1.28.0
+PORTNAME=	aws-sdk-iotsitewise
+PORTVERSION=	1.0.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Official AWS Ruby gem for AWS WAF (WAF)
+COMMENT=	Official AWS Ruby gem for AWS IoT SiteWise
 
 LICENSE=	APACHE20
 
