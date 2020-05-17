@@ -4736,6 +4736,7 @@
     SUBDIR += py-oslo.service1
     SUBDIR += py-oslo.upgradecheck
     SUBDIR += py-oslo.utils
+    SUBDIR += py-oslo.utils3
     SUBDIR += py-oslo.versionedobjects
     SUBDIR += py-oslo.versionedobjects1
     SUBDIR += py-oslo.vmware
@@ -4901,6 +4902,7 @@
     SUBDIR += py-pytest-azurepipelines
     SUBDIR += py-pytest-benchmark
     SUBDIR += py-pytest-black
+    SUBDIR += py-pytest-black-multipy
     SUBDIR += py-pytest-cache
     SUBDIR += py-pytest-capturelog
     SUBDIR += py-pytest-cov
