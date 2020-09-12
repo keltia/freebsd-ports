@@ -1,13 +1,13 @@
 # $FreeBSD$
 
-PORTNAME=	azure-mgmt-resource
-PORTVERSION=	10.2.0
+PORTNAME=	azure-mgmt-synapse
+DISTVERSION=	0.3.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dbaio@FreeBSD.org
-COMMENT=	Microsoft Azure Resource Management Client Library for Python
+COMMENT=	Microsoft Azure Synapse Management Client Library for Python
 
 LICENSE=	MIT
 
