@@ -141,6 +141,7 @@
     SUBDIR += drm-legacy-kmod
     SUBDIR += drm_info
     SUBDIR += dspdfviewer
+    SUBDIR += dssim
     SUBDIR += duhdraw
     SUBDIR += dynamechs
     SUBDIR += ebsynth
@@ -434,6 +435,7 @@
     SUBDIR += libchamplain
     SUBDIR += libdmtx
     SUBDIR += libdrm
+    SUBDIR += libdssim
     SUBDIR += libecwj2
     SUBDIR += libemf
     SUBDIR += libepoxy
