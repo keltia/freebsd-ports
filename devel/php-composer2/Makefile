@@ -2,16 +2,17 @@
 # $FreeBSD$
 
 PORTNAME=	composer
-DISTVERSION=	1.10.19
+DISTVERSION=	2.0.8
 CATEGORIES=	devel
 MASTER_SITES=	https://getcomposer.org/download/${DISTVERSION}/
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	2
 DISTNAME=	composer
 EXTRACT_SUFX=	.phar
 DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	cyberbotx@cyberbotx.com
-COMMENT=	Dependency Manager for PHP
+COMMENT=	Dependency Manager for PHP, version 2.x
 
 LICENSE=	MIT
 
@@ -20,7 +21,7 @@ RUN_DEPENDS=	ca_root_nss>0:security/ca_root_nss
 USES=		php:flavors
 USE_PHP=	intl openssl phar json ctype filter mbstring
 
-CONFLICTS_INSTALL=	php*-composer2-*
+CONFLICTS_INSTALL=	php*-composer-*
 
 NO_ARCH=	yes
 NO_BUILD=	yes
