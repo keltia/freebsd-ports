@@ -1211,6 +1211,7 @@
     SUBDIR += sqlmap
     SUBDIR += sqlninja
     SUBDIR += srm
+    SUBDIR += ssb
     SUBDIR += ssdeep
     SUBDIR += ssh-multiadd
     SUBDIR += ssh-vault
@@ -1299,6 +1300,7 @@
     SUBDIR += xml-security
     SUBDIR += xmlsec1
     SUBDIR += xorsearch
+    SUBDIR += xray-core
     SUBDIR += yafic
     SUBDIR += yapet
     SUBDIR += yara
