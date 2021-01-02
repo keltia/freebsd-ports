@@ -8287,7 +8287,6 @@ devel/avltree||2016-07-04|Has expired: Broken for more than 6 months
 devel/cbind||2016-07-04|Has expired: Broken for more than 6 months
 devel/tclgetopts||2016-07-04|Has expired: Broken for more than 6 months
 devel/antlrworks||2016-07-04|Has expired: Broken for more than 6 months
-devel/acme||2016-07-04|Has expired: Broken for more than 6 months
 devel/libopensync022||2016-07-04|Has expired: Broken for more than 6 months
 archivers/epkg||2016-07-04|Has expired: Broken for more than 6 months
 print/enscriptfonts||2016-07-04|Has expired: Broken for more than 6 months
@@ -15968,3 +15967,8 @@ www/trac-ldap||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
 www/trac-spam-filter||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
 www/trac-timingandestimation||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
 www/trac-themeengine||2021-01-01|Has expired: Uses Python 2.7 which is EOLed upstream
+www/iridium||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+editors/atom||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/electron4||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/electron5||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/electron6||2021-01-02|Has expired: Uses Python 2.7 which is EOLed upstream

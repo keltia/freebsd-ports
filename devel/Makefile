@@ -105,6 +105,7 @@
     SUBDIR += aarch64-xtoolchain-gcc
     SUBDIR += abi-compliance-checker
     SUBDIR += abseil
+    SUBDIR += acme
     SUBDIR += acsccid
     SUBDIR += activitymail
     SUBDIR += ada-util
@@ -522,9 +523,6 @@
     SUBDIR += efl
     SUBDIR += egypt
     SUBDIR += eiffelstudio
-    SUBDIR += electron4
-    SUBDIR += electron5
-    SUBDIR += electron6
     SUBDIR += electron7
     SUBDIR += elf
     SUBDIR += elfio
