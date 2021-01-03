@@ -826,6 +826,7 @@
     SUBDIR += py-gdal
     SUBDIR += py-geomdl
     SUBDIR += py-geopandas
+    SUBDIR += py-giddy
     SUBDIR += py-gizeh
     SUBDIR += py-glfw
     SUBDIR += py-glooey
@@ -843,6 +844,7 @@
     SUBDIR += py-leather
     SUBDIR += py-mapclassify
     SUBDIR += py-mcomix
+    SUBDIR += py-mgwr
     SUBDIR += py-ming
     SUBDIR += py-mpl-interactions
     SUBDIR += py-mpl-scatter-density
@@ -858,6 +860,7 @@
     SUBDIR += py-pivy
     SUBDIR += py-plotly
     SUBDIR += py-png
+    SUBDIR += py-pointpats
     SUBDIR += py-pycha
     SUBDIR += py-pycollada
     SUBDIR += py-pydot
@@ -884,6 +887,7 @@
     SUBDIR += py-qrencode
     SUBDIR += py-qt5-svg
     SUBDIR += py-rasterio
+    SUBDIR += py-rasterstats
     SUBDIR += py-rawkit
     SUBDIR += py-s2
     SUBDIR += py-scikit-image
