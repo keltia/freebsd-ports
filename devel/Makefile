@@ -3694,6 +3694,7 @@
     SUBDIR += pam_wrapper
     SUBDIR += papi
     SUBDIR += papilio-loader
+    SUBDIR += parallel-hashmap
     SUBDIR += pas2dox
     SUBDIR += pasm
     SUBDIR += patch
@@ -6813,6 +6814,7 @@
     SUBDIR += t1lib
     SUBDIR += ta-lib
     SUBDIR += tablist
+    SUBDIR += tabulate
     SUBDIR += tailor
     SUBDIR += talloc
     SUBDIR += taskctl
