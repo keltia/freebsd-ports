@@ -4570,6 +4570,7 @@
     SUBDIR += py-jupyter_core
     SUBDIR += py-jupyterlab
     SUBDIR += py-jupyterlab-server
+    SUBDIR += py-jupyterlab-widgets
     SUBDIR += py-jupyterlab_launcher
     SUBDIR += py-kaitaistruct
     SUBDIR += py-kaptan
@@ -4936,6 +4937,7 @@
     SUBDIR += py-pytest-forked
     SUBDIR += py-pytest-freezegun
     SUBDIR += py-pytest-helpers-namespace
+    SUBDIR += py-pytest-httpbin
     SUBDIR += py-pytest-isort
     SUBDIR += py-pytest-lazy-fixture
     SUBDIR += py-pytest-localserver
