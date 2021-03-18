@@ -2,20 +2,22 @@
 # $FreeBSD$
 
 PORTNAME=	dnsmasq
-DISTVERSION=	2.84
+DISTVERSION=	2.85rc1
 # Leave the PORTREVISION in even if 0 to avoid accidental PORTEPOCH bumps:
 PORTREVISION=	0
-PORTEPOCH=	1
+PORTEPOCH=	3 # attn - different between -devel and dnsmasq ports!
 CATEGORIES=	dns
-MASTER_SITES=	https://www.thekelleys.org.uk/dnsmasq/ \
+MASTER_SITES=	https://www.thekelleys.org.uk/dnsmasq/release-candidates/ \
 		LOCAL/mandree/
+PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Lightweight DNS forwarder, DHCP, and TFTP server
 
-CONFLICTS_INSTALL=	dnsmasq-devel-*
-
 LICENSE=	GPLv2
+
+DEPRECATED=	short-lived development branch, to be removed once 2.85 is released
+EXPIRATION_DATE=2021-03-31 # this is to keep dnsmasq-devel outside the quarterly branches
 
 USES=		cpe shebangfix tar:xz
 CPE_VENDOR=	thekelleys
@@ -33,8 +35,7 @@ CFLAGS+=	-Wall -Wno-unused-function -Wno-unused-parameter \
 		-Wno-unused-value -Wno-unused-variable
 CPPFLAGS+=	-I${LOCALBASE}/include
 
-CONFLICTS_INSTALL=	dnsmasq-devel-*
-
+CONFLICTS_INSTALL=	dnsmasq-2*
 PATCH_STRIP=	-p1
 SUB_FILES=	pkg-message
 
@@ -106,7 +107,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${_intllibs} ${ICONV_LIB}
 
 post-patch:
 	${REINPLACE_CMD} -e '/^lua_/s/lua5\.2/lua-${LUA_VER}/' ${WRKSRC}/Makefile
-	${REINPLACE_CMD} -e 's/2\.84rc2/2.84/' ${WRKSRC}/VERSION
+	${REINPLACE_CMD} -e 's/ifr\.ifr_ifindex/ifr.ifr_index/' ${WRKSRC}/src/network.c
 
 pre-configure: pretty-print-config
 .if ${PORT_OPTIONS:MIDN}
